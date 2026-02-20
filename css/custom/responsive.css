@@ -26,121 +26,20 @@
         justify-content: right;
     }
 
-    .infrastructure-system__item {
-        width: calc(100% / 3 - 20px);
-    }
-
-    .product-item {
-        width: calc(100% / 4 - 20px);
-    }
-
-    .reason-item,
-    .tool-guide__item {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .help-category-item {
-        width: calc(100% / 4 - 16px);
-    }
-
-    .product-hero {
-        background-image: unset;
-    }
-
-    .feature-card {
-        padding: 30px;
-    }
-
-    .digicert-solution__block,
-    .timeline-right,
-    .timeline-left {
-        width: 100%;
-    }
-
-    .background-banner__content .hero-title {
-        font-size: calc(var(--font-size-base) * 1.5);
-    }
-
-    .background-banner__content .hero-desc {
-        font-size: calc(var(--font-size-base) + 2px);
-    }
-
-    .background-banner__content button {
-        font-size: calc(var(--font-size-base) + 2px);
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
-        border-radius: 50px;
-    }
+    
 }
 
 @media screen and (max-width: 900px) {
-    .why-choose-us__container {
-        flex-direction: column;
-    }
-
-    .why-choose-us__item {
-        width: 100%;
-    }
-
-    .contact__container {
-        flex-direction: column;
-    }
-
-    .contact__item {
-        width: 100%;
-    }
-
-    .value-card {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .background-banner__container {
-        aspect-ratio: 16 / 9;
-    }
+ 
 }
 
 @media screen and (max-width: 835px) {
-    .feature-product__content {
-        padding: 10px;
-    }
-
-    .link-guide__container a {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .service-item {
-        width: calc(100% / 2 - 20px);
-    }
+   
 }
 
 @media screen and (max-width: 800px) {
 
-    .feature-card,
-    .partner-item,
-    .infrastructure-system__item,
-    .feature-product__item.feature-product__active,
-    .feature-product__item {
-        width: calc(100% / 2 - 18px);
-    }
-
-    .product-item {
-        width: calc(100% / 3 - 20px);
-    }
-
-    .core-left,
-    .core-right {
-        width: 100%;
-    }
-
-    .background-banner__container {
-        aspect-ratio: 4 / 3;
-    }
-
-    .background-banner__logobrand {
-        aspect-ratio: 279 / 128;
-        max-width: 120px;
-    }
+   
 }
 
 @media screen and (min-width: 769px) {}
@@ -163,37 +62,10 @@
         font-size: 24px;
     }
 
-    .help-category-item {
-        width: calc(100% / 3 - 15px);
-    }
-
-    .team-card {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .digicert-why__card {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width : 700px) {
-    .blog-content__container {
-        flex-direction: column;
-    }
-
-    .digicert-highlight__card,
-    .stat-item,
-    .tool-guide__item {
-        width: 100%;
-    }
-
-    .product-tabs {
-        display: none;
-    }
-
-    .digicert-card {
-        width: calc(100% / 2 - 10px);
-    }
+    
 }
 
 @media screen and (max-width: 590px) {
@@ -202,43 +74,12 @@
         padding-bottom: 0px;
     }
 
-    .benefit-item,
-    .product-overview,
-    .product-highlight,
-    .team-card,
-    .value-card,
-    .reason-item,
-    .infrastructure-system__item,
-    .feature-product__item.feature-product__active,
-    .feature-product__item {
-        width: 100%;
-    }
-
-    .product-item {
-        width: calc(100% / 2 - 20px);
-    }
-
-    .help-category-item {
-        width: calc(100% / 2 - 15px);
-    }
-
-    .feature-card {
-        padding: 10px;
-    }
 }
 
 @media screen and (max-width: 551px) {
-    .link-guide__container a {
-        width: 100%;
-    }
-
-    .timeline-left img {
-        max-width: 150px;
-    }
+   
 }
 
 @media screen and (max-width: 480px) {
-    .feature-card {
-        width: 100%;
-    }
+    
 }
