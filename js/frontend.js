@@ -621,6 +621,46 @@ function initTechBoxToggle({
   });
 }
 
+// js vuôt table
+function initHorizontalDragScroll(selector = ".table-scroll") {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach((el) => {
+    // tránh bind trùng
+    if (el.dataset.dragScrollBound === "true") return;
+    el.dataset.dragScrollBound = "true";
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    el.addEventListener("mousedown", (e) => {
+      isDown = true;
+      el.classList.add("is-dragging");
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
+    });
+
+    el.addEventListener("mouseleave", () => {
+      isDown = false;
+      el.classList.remove("is-dragging");
+    });
+
+    el.addEventListener("mouseup", () => {
+      isDown = false;
+      el.classList.remove("is-dragging");
+    });
+
+    el.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - el.offsetLeft;
+      const walk = x - startX;
+      el.scrollLeft = scrollLeft - walk;
+    });
+  });
+}
+
 // js validate form
 function validateField(input) {
   const group = input.closest(".form-group");
@@ -805,12 +845,12 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         trigger: ".rate-btn",
         behavior: "activate",
-        activeClass:"active",
+        activeClass: "active",
       },
       {
         trigger: ".pagination-btn__custom",
         behavior: "activate",
-        activeClass:"active",
+        activeClass: "active",
       },
       {
         trigger: ".js-faq-trigger",
@@ -834,7 +874,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleMenu('.menu-container__bar', '.m-menu');
     initMobileMenuSimple();
     runCoreProgress();
-    initTechBoxToggle();
+    initHorizontalDragScroll();
     initFormValidation();
   });
 });
