@@ -554,6 +554,84 @@
     background: var(--primary-color);
 }
 
+/* css comment */
+.review-item {
+    padding: 20px;
+}
+
+.review-item>div {
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.review-item__avatar {
+    aspect-ratio: 1 / 1;
+    min-height: 57px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.review-item__avatar img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.rate-score ,
+.rate-score__title h1 {
+    font-size: calc(var(--font-size-base) * 2);
+    text-transform: unset;
+}
+
+.cmt-title {
+    font-size: calc(var(--font-size-base) + 8px);
+    text-transform: unset;
+}
+
+.rate-score__title p {
+    font-size: var(--font-size-base);
+}
+
+.rate-comment {}
+
+.rate-btn {
+    height: fit-content;
+    padding: 10px;
+    font-size: var(--font-size-base);
+    min-height: 50px;
+}
+
+.rate-btn span {
+    font-size: var(--font-size-base);
+    color: var(--active-color);
+}
+
+.rate-btn:hover,
+.rate-btn.active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+/* css pagination */
+.pagination {
+    padding-top: 20px;
+}
+
+.pagination-btn__custom {
+    aspect-ratio: 1 / 1;
+    min-height: 40px;
+    padding: 10px;
+}
+
+.pagination-btn__custom.active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.pagination-btn__custom:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
 /* css trang chủ */
 .review-card {
     padding: 20px;
@@ -566,6 +644,7 @@
     max-height: 57px;
 }
 
+.rate-comment,
 .review-star {
     color: var(--active-color);
     font-size: calc(var(--font-size-base) + 4px);
@@ -611,15 +690,15 @@
     padding: 20px;
 }
 
-.solution-intro h1{
+.solution-intro h1 {
     font-size: calc(var(--font-size-base) + 10px);
 }
 
-.solution-intro h2{
+.solution-intro h2 {
     font-size: calc(var(--font-size-base) + 8px);
 }
 
-.solution-intro p{
+.solution-intro p {
     font-size: var(--font-size-base);
 }
 
@@ -744,14 +823,14 @@
     -webkit-overflow-scrolling: touch;
 }
 
-.digicert-table{
+.digicert-table {
     width: 100%;
     border-collapse: collapse;
     background: var(--white-color);
     table-layout: fixed;
 }
 
-.digicert-table{
+.digicert-table {
     min-width: 1414px;
 }
 
@@ -762,21 +841,21 @@
     text-align: center;
 }
 
-.digicert-table td{
+.digicert-table td {
     padding: 16px;
     border-bottom: 1px solid var(--gray-blue-color);
     border-right: 1px solid var(--gray-blue-color);
 }
 
-.digicert-table td:first-child{
-    border-left: 1px solid var(--gray-blue-color);  
+.digicert-table td:first-child {
+    border-left: 1px solid var(--gray-blue-color);
 }
 
 .digicert-table td:not(:first-child) {
     text-align: center;
 }
 
-.btn-buy{
+.btn-buy {
     padding: 20px 40px;
     border: transparent;
     border-radius: 10px;

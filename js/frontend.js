@@ -803,6 +803,16 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: "toggle"
       },
       {
+        trigger: ".rate-btn",
+        behavior: "activate",
+        activeClass:"active",
+      },
+      {
+        trigger: ".pagination-btn__custom",
+        behavior: "activate",
+        activeClass:"active",
+      },
+      {
         trigger: ".js-faq-trigger",
         target: ".js-faq-target",
         activeClass: "active",
