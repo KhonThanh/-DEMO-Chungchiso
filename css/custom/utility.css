@@ -38,9 +38,9 @@
 
 .text-center { text-align: center; }
 .text-header-size{ font-size: 38px;}
-.pos-rel { position: relative; };
-.pos-abs { position: absolute; };
-.pos-fixed { position: fixed; };
+.pos-rel { position: relative; }
+.pos-abs { position: absolute; }
+.pos-fixed { position: fixed; }
 .pos-stick { position: sticky; }
 
 .container-xxs,
