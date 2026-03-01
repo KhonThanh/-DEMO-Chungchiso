@@ -348,14 +348,14 @@
 /* css CTA */
 .cta-floating {
     position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     background: var(--white-color);
-    border-radius: 50px;
+    border-radius: 10px;
     border: 1px solid var(--primary-color);
-    padding: 10px;
+    padding: 20px;
     gap: 10px;
 }
 
@@ -364,6 +364,22 @@
     width: 100%;
     height: auto;
     max-width: 32px;
+}
+
+.cta-link {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    min-height: 57px;
+    border-radius: 10px;
+}
+
+.cta-content p{
+    font-size: calc(var(--font-size-base) - 4px);
+}
+
+.cta-link img {
+    object-position: center;
+    object-fit: contain;
 }
 
 .btn-submit {
@@ -758,7 +774,7 @@
     margin-bottom: 20px;
 }
 
-.summary-total{
+.summary-total {
     padding: 10px;
 }
 
@@ -771,11 +787,9 @@
     padding: 0px 10px;
 }
 
-.summary-item {
-    
-}
+.summary-item {}
 
-.checkout-right  .price strong{
+.checkout-right .price strong {
     font-size: calc(var(--font-size-base) + 20px);
     color: var(--error-color);
 }
