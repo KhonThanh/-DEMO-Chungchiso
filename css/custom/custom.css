@@ -742,14 +742,49 @@
 }
 
 /* css trang quan ly */
-.account-manager__btn{
+.account-manager__btn {
     width: fit-content !important;
     padding: 10px 20px;
 }
 
+/* css bill */
+.billing-form__item {}
+
+.checkout-right {
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.summary-total{
+    padding: 10px;
+}
+
+.box-header {
+    padding: 10px 0px;
+}
+
+
+.summary-content {
+    padding: 0px 10px;
+}
+
+.summary-item {
+    
+}
+
+.checkout-right  .price strong{
+    font-size: calc(var(--font-size-base) + 20px);
+    color: var(--error-color);
+}
+
+.discount {}
+
 /* css csr */
-.tool-page{
-    padding:10px;
+.tool-page {
+    padding: 10px;
     border-radius: 10px;
 }
 
@@ -763,37 +798,37 @@
     width: 100%;
 }
 
-.tool-page h1{
+.tool-page h1 {
     font-size: calc(var(--font-size-base) + 8px);
 }
 
-.tool-page h2{
+.tool-page h2 {
     font-size: calc(var(--font-size-base) + 6px);
 }
 
-.tool-page h3{
+.tool-page h3 {
     font-size: calc(var(--font-size-base) + 3px);
 }
 
 .tool-page h1,
 .tool-page h2,
-.tool-page h3{
+.tool-page h3 {
     color: var(--primary-color);
 }
 
-.tool-page textarea{
+.tool-page textarea {
     width: 100%;
 }
 
-.tool-page ul{
+.tool-page ul {
     padding-left: 20px;
 }
 
-.tool-page ul li{
+.tool-page ul li {
     margin-bottom: 10px;
 }
 
-.btn-generate{
+.btn-generate {
     width: fit-content;
     padding: 10px 20px;
     border-radius: 10px;
