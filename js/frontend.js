@@ -853,6 +853,33 @@ document.addEventListener("DOMContentLoaded", () => {
         activeClass: "active",
       },
       {
+        trigger: ".btn-buy",
+        target: ".modal-section",
+        activeClass: "active",
+        closeBtn: ".modal-close, .modal-section .btn-custom-fit:first-child",
+        closeOnOutside: true,
+        closeOnEsc: true,
+        innerSelector: ".modal-container"
+      },
+      {
+        trigger: ".product-tabs .tab-btn",
+        target: ".product-tabs .tab-content",
+        behavior: "activate"
+      },
+      {
+        trigger: ".accordion-header",
+        behavior: "activate",
+        groupSelector: ".accordion-item",
+        activeClass: "active",
+        onActiveChange: function (isActive, trigger) {
+          const item = trigger.closest(".accordion-item");
+          if (!item) return;
+
+          if (isActive) item.classList.add("active");
+          else item.classList.remove("active");
+        }
+      },
+      {
         trigger: ".js-faq-trigger",
         target: ".js-faq-target",
         activeClass: "active",

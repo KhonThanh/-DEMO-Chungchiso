@@ -16,49 +16,6 @@
 <body>
     <header class="container-f " data-include="./component/header.html"></header>
     <main class="container-f flex flex-col center-hor pos-rel">
-        <section class="modal-section pos-fixed flex center-hor center-ver">
-            <div class="modal-overlay pos-abs"></div>
-
-            <div class="modal-container custom-item bg-white flex flex-col gap-20">
-
-                <!-- Header -->
-                <div class="flex jus-content center-ver">
-                    <h3>DigiCert Secure Site Pro SSL</h3>
-                    <button class="modal-close">×</button>
-                </div>
-
-                <!-- Body -->
-                <div class="flex flex-col gap-10">
-                    <img src="./img/logo/digicert.png" alt="" style="width:120px;">
-                    <p>DigiCert EV Multi-Domain SSL - 2 SAN included</p>
-
-                    <div class="flex flex-col gap-10">
-                        <label>Chọn năm</label>
-                        <div class="product-filter__select">
-                            <select>
-                                <option>1 năm - $274.25 trong 1 năm</option>
-                                <option>2 năm - $520.00 trong 2 năm</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-10">
-                        <label>Số lượng</label>
-                        <input type="number" value="1">
-                    </div>
-
-                    <strong>$27,50 / năm</strong>
-                    <p>Tổng cộng: $27,50</p>
-                </div>
-
-                <!-- Footer -->
-                <div class="flex jus-content center-ver">
-                    <button class="btn-custom-fit bg-white-second">Đóng</button>
-                    <button class="btn-custom-fit bg-primary text-color-white">Mua</button>
-                </div>
-
-            </div>
-        </section>
         <section class="container-f slide-container">
             <div>
                 <img src="./img/banner/banner-home.png" alt="Banner 1">
@@ -717,6 +674,7 @@
             </div>
 
         </section>
+        <section class="container-f modal-section pos-fixed center-hor center-ver hidden" data-include="./component/popup-bag.html"></section>
     </main>
     <footer class="container-f bg-white center-ver" data-include="./component/footer.html"></footer>
     <section class="cta-floating flex flex-col" data-include="./component/cta-floating.html"></section>
