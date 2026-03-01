@@ -1250,8 +1250,9 @@
     transform: rotate(-90deg);
 }
 
+.tool-page,
 .product-main {
-    width: 80%;
+    width: 70%;
 }
 
 .product-sidebar {
