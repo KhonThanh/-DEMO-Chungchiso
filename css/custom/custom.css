@@ -334,6 +334,19 @@
     font-size: var(--font-size-base);
 }
 
+/* css fade */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out, filter 0.9s ease-out;
+    will-change: opacity, transform, filter;
+}
+
+.show-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* css roll to top */
 .btntotop__container {
     position: fixed;
