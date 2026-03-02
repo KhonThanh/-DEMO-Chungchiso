@@ -149,8 +149,17 @@
 
 .m-menu.active {
     max-height: 2000px;
-    padding: 20px 20px;
+    padding: 20px 0px;
     opacity: 1;
+}
+
+.m-menu__link{
+    padding: 0px 20px;
+    width: 100%;
+}
+
+.m-submenu{
+    width: 100%;
 }
 
 .submenu div {
@@ -240,6 +249,18 @@
     text-align: right;
     color: var(--white-color);
     padding: 10px;
+}
+
+.m-submenu a{
+    color: var(--black-color);
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+}
+
+.m-submenu__item > a > img{
+    max-height: 40px;
+    min-height: 40px;
+    width: fit-content;
 }
 
 /* active thì mở */
