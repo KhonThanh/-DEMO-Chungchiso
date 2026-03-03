@@ -532,7 +532,6 @@ function initScrollToTop(btnId = "btnToTop", showOffset = 1000) {
   });
 }
 
-// js menu con 
 function initMobileMenuSimple() {
 
   // ===== LEVEL 1 =====
@@ -540,20 +539,18 @@ function initMobileMenuSimple() {
     link.addEventListener("click", function (e) {
       const currentItem = this.closest(".m-menu__item");
       if (!currentItem) return;
-
+      const submenu = currentItem.querySelector(".m-submenu");
+      if (!submenu) return;
       e.preventDefault();
-
-      // tắt tất cả item khác
       document.querySelectorAll(".m-menu__item.is-active").forEach(item => {
         if (item !== currentItem) {
           item.classList.remove("is-active");
         }
       });
-
-      // toggle item hiện tại
       currentItem.classList.toggle("is-active");
     });
   });
+
 
   // ===== LEVEL 2 =====
   document.querySelectorAll(".m-submenu__item > a").forEach(link => {
@@ -561,9 +558,10 @@ function initMobileMenuSimple() {
       const currentItem = this.closest(".m-submenu__item");
       if (!currentItem) return;
 
-      e.preventDefault();
+      const submenu = currentItem.querySelector(".m-submenu");
+      if (!submenu) return;
 
-      // tắt mấy thằng cùng level
+      e.preventDefault();
       const siblings = currentItem
         .closest(".m-submenu")
         .querySelectorAll(".m-submenu__item.is-active");
