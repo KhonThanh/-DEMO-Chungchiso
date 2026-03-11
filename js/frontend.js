@@ -350,39 +350,65 @@ function initProductGallery({
   mainSelector,
   thumbSelector
 }) {
+
   const container = document.querySelector(containerSelector);
   if (!container) return;
 
-  const mainImage = container.querySelector(mainSelector);
-  const thumbItems = container.querySelectorAll(thumbSelector);
-  const prevBtn = container.querySelector("button:first-child");
-  const nextBtn = container.querySelector("button:last-child");
+  const mainDisplay = container.querySelector(mainSelector);
+  const thumbs = container.querySelectorAll(thumbSelector);
 
-  if (!mainImage || !thumbItems.length) return;
+  const prevBtn = container.querySelector(".gallery-prev");
+  const nextBtn = container.querySelector(".gallery-next");
 
   let currentIndex = 0;
 
-  // Đổi ảnh chính
-  const showImage = (index) => {
+  const showItem = (index) => {
+
+    const item = thumbs[index];
+    const type = item.dataset.type;
+
     currentIndex = index;
-    mainImage.src = thumbItems[currentIndex].src;
+
+    // IMAGE
+    if (type === "image") {
+
+      mainDisplay.innerHTML =
+        `<img src="${item.src}" class="product-main-image">`;
+
+    }
+
+    // VIDEO
+    if (type === "video") {
+
+      const videoUrl = item.dataset.video;
+
+      mainDisplay.innerHTML =
+        `<iframe
+          width="100%"
+          height="400"
+          src="${videoUrl}"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>`;
+
+    }
+
   };
 
-  // Click thumbnail
-  thumbItems.forEach((img, index) => {
-    img.addEventListener("click", () => showImage(index));
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => showItem(index));
   });
 
-  // Nút prev / next
   prevBtn?.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + thumbItems.length) % thumbItems.length;
-    showImage(currentIndex);
+    currentIndex = (currentIndex - 1 + thumbs.length) % thumbs.length;
+    showItem(currentIndex);
   });
 
   nextBtn?.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % thumbItems.length;
-    showImage(currentIndex);
+    currentIndex = (currentIndex + 1) % thumbs.length;
+    showItem(currentIndex);
   });
+
 }
 
 // chức năng swiper ở mục tab và sản phẩm trang chủ
@@ -823,8 +849,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // gallery hình ảnh sản phẩm
     initProductGallery({
       containerSelector: ".product-container__image",
-      mainSelector: ".product-image > img",
-      thumbSelector: ".product-image__item img"
+      mainSelector: ".product-main",
+      thumbSelector: ".product-thumb"
     });
     // ✨ 4️⃣ HIỆU ỨNG ẢNH & REVEAL
     applyImageEnhancements();
