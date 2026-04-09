@@ -2,7 +2,7 @@
   font-family: 'Oswald';
   src: url('../../font/Oswald-Bold.ttf') format('woff2'),
        local('Oswald');
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -10,7 +10,7 @@
   font-family: 'Oswald';
   src: url('../../font/Oswald-ExtraLight.ttf') format('woff2'),
        local('Oswald');
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -18,7 +18,7 @@
   font-family: 'Oswald';
   src: url('../../font/Oswald-Light.ttf') format('woff2'),
        local('Oswald');
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
@@ -26,7 +26,7 @@
   font-family: 'Oswald';
   src: url('../../font/Oswald-Medium.ttf') format('woff2'),
        local('Oswald');
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -42,7 +42,7 @@
   font-family: 'Oswald';
   src: url('../../font/Oswald-SemiBold.ttf') format('woff2'),
        local('Oswald');
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -58,7 +58,7 @@
   font-family: 'Inter';
   src: local('Inter'), local('Inter-SemiBold'),
        url('../../font/Inter_18pt-SemiBold.ttf') format('woff2');
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

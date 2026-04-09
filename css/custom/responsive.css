@@ -75,6 +75,17 @@
     }
 }
 
+/* Mobile: Giảm gap để tránh xô item ra ngoài */
+@media screen and (max-width: 600px) {
+    :root {
+        --gap: 10px;
+    }
+    
+    .container-padding {
+        padding: 20px 0px;
+    }
+}
+
 @media screen and (max-width : 700px) {
     .solution-card__body {
         flex-direction: column-reverse;
